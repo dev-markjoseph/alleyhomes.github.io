@@ -1,0 +1,220 @@
+#hero {
+  height: 600px;
+  background: url("../images/hero-rs.jpg"), rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.9;
+}
+#hero .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--textColorWhite);
+}
+#hero .container h1 {
+  font-size: 2.8rem;
+}
+#hero .container p {
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+#hero .container .input-field {
+  padding: 10px;
+  background-color: var(--textColorWhite);
+  border-radius: 10px;
+  box-shadow: 0 13px 26px rgb(0 0 0 / 12%);
+}
+#hero .container .input-field input {
+  background-color: var(--textColorWhite);
+  width: 400px;
+  height: 30px;
+  border: none;
+  outline: none;
+  font-family: var(--headerFont);
+  font-weight: 700;
+}
+
+#hero .content-btn {
+  margin-top: 0;
+}
+
+#navBar {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 80px;
+  color: var(--textColorWhite);
+}
+#navBar i {
+  font-size: 1.4rem;
+  display: none;
+}
+#navBar ul {
+  display: flex;
+}
+#navBar h1 {
+  font-family: El Messiri, sans-serif;
+  margin-bottom: 0;
+}
+#navBar .container {
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+
+#navBar .container ul li {
+  list-style: none;
+}
+
+#navBar a {
+  text-decoration: none;
+  color: var(--textColorWhite);
+  margin-left: 30px;
+}
+.row-container {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.section2-text {
+  align-items: flex-end;
+  max-width: 500px;
+}
+#section2 .container {
+  flex-direction: column;
+  align-content: space-between;
+}
+#section2 .container img {
+  max-width: 500px;
+}
+
+#section2 .section2-text h1 {
+  font-size: 2rem;
+}
+#section2 .section2-text p {
+  font-size: 0.9rem;
+}
+.p-2 {
+  padding-top: 40px;
+}
+#section3 {
+  background-color: white;
+}
+#section3 .container {
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+#section3 .container img {
+  width: 500px;
+}
+#section3 .section3-text h1 {
+  font-size: 2rem;
+}
+#section3 .section3-text p {
+  font-size: 0.9rem;
+}
+.section3-text a {
+  text-decoration: none;
+  color: var(--btnColor);
+  font-size: 1.1rem;
+}
+.section3-text p:nth-child(3) {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1080px) {
+  .row-container {
+    flex-direction: column;
+    margin: auto;
+  }
+  .section2-text {
+    margin-top: 20px;
+  }
+  .p-2 .section2-text {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #section3 .container {
+    flex-direction: column;
+  }
+  #section3 .section3-text {
+    max-width: 600px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  #hero .container .input-field input {
+    width: 300px;
+  }
+  #navBar i {
+    display: block;
+  }
+
+  #navBar ul {
+    position: fixed;
+    top: 80px;
+    width: 60%;
+    height: 100vh;
+    background-color: var(--btnColor);
+    transition: 0.5s ease-in-out;
+    -webkit-transition: all 0.3s linear 0s;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    display: block;
+    left: -100%;
+  }
+
+  #navBar li {
+    margin: 0;
+  }
+
+  #navBar ul.show {
+    display: block;
+    left: 0;
+    transition: 0.5s ease-in-out;
+  }
+  #navBar ul.show li {
+    transition: 0.3s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #hero .container .input-field input {
+    width: 200px;
+    height: 25px;
+  }
+  #hero .container .input-field button {
+    padding: 6px 12px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .row-container img {
+    width: 300px;
+    margin: 20px auto;
+  }
+  .section2-text {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .row-container img {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 365px) {
+  #hero .container .input-field button {
+    font-size: 0.6rem;
+  }
+  #hero .container .input-field input {
+    width: 160px;
+    font-size: 0.7rem;
+  }
+  #hero .container .input-field {
+    padding: 5px;
+  }
+}
